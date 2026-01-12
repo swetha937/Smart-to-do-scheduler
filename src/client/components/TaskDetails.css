@@ -1,0 +1,251 @@
+.task-details {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 0;
+  color: white;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.task-details-header {
+  margin-bottom: 20px;
+}
+
+.task-details-header h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.5em;
+  background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.task-meta {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  font-size: 0.9em;
+}
+
+.priority {
+  background: linear-gradient(45deg, #ff9a9e, #fecfef);
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+.category {
+  background: linear-gradient(45deg, #a8edea, #fed6e3);
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: #333;
+}
+
+.due-date {
+  background: linear-gradient(45deg, #d299c2, #fef9d7);
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: #333;
+}
+
+.due-date.overdue {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  color: white;
+}
+
+.task-description {
+  margin: 15px 0;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+.progress-section {
+  margin: 20px 0;
+}
+
+.progress-label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00d4ff, #090979);
+  transition: width 0.3s ease;
+  border-radius: 5px;
+}
+
+.time-tracking-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.time-info {
+  display: flex;
+  gap: 15px;
+}
+
+.time-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+.time-btn:hover {
+  transform: scale(1.05);
+}
+
+.time-btn.start {
+  background: linear-gradient(45deg, #00d4ff, #090979);
+  color: white;
+}
+
+.time-btn.stop {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  color: white;
+}
+
+.subtasks-section, .dependencies-section, .tags-section {
+  margin: 20px 0;
+}
+
+.subtasks-section h4, .dependencies-section h4, .tags-section h4 {
+  margin: 0 0 15px 0;
+  color: #ffd93d;
+  font-size: 1.1em;
+}
+
+.add-subtask {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.add-subtask input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  font-size: 1em;
+}
+
+.add-subtask button {
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.add-subtask button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.subtasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.subtask {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.subtask:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+.subtask.completed {
+  opacity: 0.7;
+  text-decoration: line-through;
+}
+
+.subtask input[type="checkbox"] {
+  transform: scale(1.2);
+}
+
+.subtask-time {
+  margin-left: auto;
+  font-size: 0.9em;
+  color: #ffd93d;
+}
+
+.dependencies-list, .tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.dependency-tag, .tag {
+  padding: 5px 12px;
+  background: linear-gradient(45deg, #ff9a9e, #fecfef);
+  color: #333;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.tag {
+  background: linear-gradient(45deg, #a8edea, #fed6e3);
+}
+
+/* Rainbow animation for completed subtasks */
+.subtask.completed span {
+  background: linear-gradient(45deg, #ff6b6b, #ffd93d, #6bcf7f, #4d96ff, #9b59b6);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: rainbow 2s ease infinite;
+}
+
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
